@@ -143,8 +143,15 @@
                         <viewLayoutGuide key="safeArea" id="IC7-WF-hn1"/>
                     </view>
                     <navigationItem key="navigationItem" id="il1-Nb-6aL">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="7hW-gt-LJg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="7hW-gt-LJg">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="K9A-fm-g7F" id="58F-Ux-oK8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOutSegue" modalPresentationStyle="fullScreen" id="78p-Uj-lF7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSz-ff-dBr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,5 +178,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="HiW-t1-3HQ"/>
+        <segue reference="78p-Uj-lF7"/>
     </inferredMetricsTieBreakers>
 </document>

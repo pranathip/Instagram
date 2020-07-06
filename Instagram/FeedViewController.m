@@ -7,6 +7,7 @@
 //
 
 #import "FeedViewController.h"
+#import <Parse/Parse.h>
 
 @interface FeedViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)logOutButtonTapped:(id)sender {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        // PFUser.current() will now be nil
+        [self performSegueWithIdentifier:@"logOutSegue" sender:nil];
+    }];
 }
 
 /*
