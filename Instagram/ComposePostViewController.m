@@ -8,6 +8,7 @@
 
 #import "ComposePostViewController.h"
 #import "Post.h"
+@import MBProgressHUD;
 
 @interface ComposePostViewController () <UITextViewDelegate>
 
@@ -27,11 +28,13 @@
 }
 - (IBAction)postButtonTapped:(id)sender {
     NSLog(@"tapped");
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [Post postUserImage: [self resizeImage:self.postImageView.image withSize:CGSizeMake(152.5, 152.5)] withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError *_Nullable error) {
         if (error) {
             NSLog(@"Error posting: %@", error.localizedDescription);
         } else {
             NSLog(@"Successfully posted image!");
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self dismissViewControllerAnimated:true completion:nil];
         }
     }];

@@ -21,12 +21,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iJY-2a-vdi">
-                                <rect key="frame" x="20" y="294" width="374" height="34"/>
+                                <rect key="frame" x="20" y="297.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwv-az-GsG">
-                                <rect key="frame" x="20" y="350" width="374" height="36"/>
+                                <rect key="frame" x="20" y="353.5" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="G2L-mq-dpe"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJ9-kE-crI">
-                                <rect key="frame" x="20" y="238" width="374" height="34"/>
+                                <rect key="frame" x="20" y="241.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Q-2P-WVK">
-                                <rect key="frame" x="128" y="153" width="159" height="61"/>
+                                <rect key="frame" x="128" y="153" width="159" height="64.5"/>
                                 <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="52"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -419,6 +419,151 @@
             </objects>
             <point key="canvasLocation" x="3963.7681159420295" y="114.50892857142857"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="xJv-DU-Z6P">
+            <objects>
+                <viewController id="Vah-PD-W1O" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bab-16-jE1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1Vi-ZE-lsQ">
+                                <rect key="frame" x="20" y="117" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="izf-By-LHz"/>
+                                    <constraint firstAttribute="height" constant="100" id="zMv-bC-oWM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0g-qo-rnZ">
+                                <rect key="frame" x="20" y="229" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the user's bio, they can edit it in settings." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0u-KV-ZKb">
+                                <rect key="frame" x="20" y="258" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tle-L1-RK8">
+                                <rect key="frame" x="20" y="297" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <state key="normal" title="Edit Profile">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KlX-fv-ZvG" kind="presentation" modalPresentationStyle="fullScreen" id="dCL-G3-qPO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tle-L1-RK8" firstAttribute="top" secondItem="i0u-KV-ZKb" secondAttribute="bottom" constant="18" id="2Qh-i6-Pvw"/>
+                            <constraint firstItem="i0u-KV-ZKb" firstAttribute="top" secondItem="e0g-qo-rnZ" secondAttribute="bottom" constant="8" id="4F9-S3-CT2"/>
+                            <constraint firstItem="tle-L1-RK8" firstAttribute="leading" secondItem="i0u-KV-ZKb" secondAttribute="leading" id="6r1-XA-TGV"/>
+                            <constraint firstItem="1Vi-ZE-lsQ" firstAttribute="leading" secondItem="zxl-Tj-MgO" secondAttribute="leading" constant="20" id="NNj-Dc-dF0"/>
+                            <constraint firstItem="zxl-Tj-MgO" firstAttribute="trailing" secondItem="tle-L1-RK8" secondAttribute="trailing" constant="20" id="PwV-Gt-ZUZ"/>
+                            <constraint firstItem="1Vi-ZE-lsQ" firstAttribute="top" secondItem="zxl-Tj-MgO" secondAttribute="top" constant="29" id="a6y-3X-osZ"/>
+                            <constraint firstItem="i0u-KV-ZKb" firstAttribute="leading" secondItem="e0g-qo-rnZ" secondAttribute="leading" id="bd6-wh-Om8"/>
+                            <constraint firstItem="e0g-qo-rnZ" firstAttribute="leading" secondItem="zxl-Tj-MgO" secondAttribute="leading" constant="20" id="g4I-iD-s72"/>
+                            <constraint firstItem="e0g-qo-rnZ" firstAttribute="top" secondItem="1Vi-ZE-lsQ" secondAttribute="bottom" constant="12" id="vqN-PJ-Svj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zxl-Tj-MgO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="5SZ-da-G9G"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="i0u-KV-ZKb" id="Z5l-O3-U7r"/>
+                        <outlet property="editProfileButton" destination="tle-L1-RK8" id="Cbw-L5-WNB"/>
+                        <outlet property="nameLabel" destination="e0g-qo-rnZ" id="JHF-6l-BdW"/>
+                        <outlet property="profilePicView" destination="1Vi-ZE-lsQ" id="55L-q3-fVL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqh-hC-zWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5589.8550724637689" y="114.50892857142857"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="K8x-pT-H2j">
+            <objects>
+                <viewController id="Xcz-P8-1uV" customClass="EditProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wno-HK-naJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="XCF-1k-ndy">
+                                <rect key="frame" x="157" y="113" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Wof-KX-32C"/>
+                                    <constraint firstAttribute="width" constant="100" id="rpw-LJ-0Pg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEl-QR-sgn">
+                                <rect key="frame" x="134" y="221" width="146" height="30"/>
+                                <state key="normal" title="Change Profile Photo"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-Cw-wKk">
+                                <rect key="frame" x="20" y="261" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEditNameField:" destination="Xcz-P8-1uV" eventType="editingChanged" id="1LV-GS-d6d"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kZ-pm-phw">
+                                <rect key="frame" x="20" y="303" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEditUsernameField:" destination="Xcz-P8-1uV" eventType="editingChanged" id="OEn-pE-7Jx"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRg-B5-aSe">
+                                <rect key="frame" x="20" y="345" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEditBioField:" destination="Xcz-P8-1uV" eventType="editingChanged" id="sJf-gw-kkI"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XCF-1k-ndy" firstAttribute="centerX" secondItem="Wno-HK-naJ" secondAttribute="centerX" id="FKW-2W-G9t"/>
+                            <constraint firstItem="0kZ-pm-phw" firstAttribute="top" secondItem="AJF-Cw-wKk" secondAttribute="bottom" constant="8" id="GcG-pv-cGY"/>
+                            <constraint firstItem="F1e-mj-u3o" firstAttribute="trailing" secondItem="fRg-B5-aSe" secondAttribute="trailing" constant="20" id="HS2-wt-GzE"/>
+                            <constraint firstItem="XCF-1k-ndy" firstAttribute="top" secondItem="F1e-mj-u3o" secondAttribute="top" constant="25" id="Hce-mA-xL6"/>
+                            <constraint firstItem="AJF-Cw-wKk" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="20" id="QWG-pp-mTf"/>
+                            <constraint firstItem="sEl-QR-sgn" firstAttribute="centerX" secondItem="Wno-HK-naJ" secondAttribute="centerX" id="Sn9-Yg-HGq"/>
+                            <constraint firstItem="fRg-B5-aSe" firstAttribute="top" secondItem="0kZ-pm-phw" secondAttribute="bottom" constant="8" id="T8H-kk-gbb"/>
+                            <constraint firstItem="AJF-Cw-wKk" firstAttribute="top" secondItem="sEl-QR-sgn" secondAttribute="bottom" constant="10" id="aOX-Th-p3a"/>
+                            <constraint firstItem="F1e-mj-u3o" firstAttribute="trailing" secondItem="AJF-Cw-wKk" secondAttribute="trailing" constant="20" id="gxY-Px-WnA"/>
+                            <constraint firstItem="0kZ-pm-phw" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="20" id="hYT-7g-7xD"/>
+                            <constraint firstItem="sEl-QR-sgn" firstAttribute="top" secondItem="XCF-1k-ndy" secondAttribute="bottom" constant="8" id="qZ2-FG-Dnz"/>
+                            <constraint firstItem="fRg-B5-aSe" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="20" id="rfp-Cy-uok"/>
+                            <constraint firstItem="F1e-mj-u3o" firstAttribute="trailing" secondItem="0kZ-pm-phw" secondAttribute="trailing" constant="20" id="t8R-QN-itM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F1e-mj-u3o"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4z0-zy-fOi">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="rMT-v9-Itt">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Xcz-P8-1uV" id="piG-uQ-KHk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bioTextView" destination="fRg-B5-aSe" id="veH-9I-4nt"/>
+                        <outlet property="changeProfilePicButton" destination="sEl-QR-sgn" id="yz0-Ol-4Fe"/>
+                        <outlet property="nameTextView" destination="AJF-Cw-wKk" id="Mpn-k2-Oxx"/>
+                        <outlet property="profilePicView" destination="XCF-1k-ndy" id="DJ4-x7-lU6"/>
+                        <outlet property="userNameTextView" destination="0kZ-pm-phw" id="aOO-tS-QQs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfI-d2-KlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7124.6376811594209" y="114.50892857142857"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xev-y6-40k">
             <objects>
@@ -427,9 +572,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="cJE-SK-0VO" kind="relationship" relationship="viewControllers" id="YMB-BC-mZh"/>
+                        <segue destination="XmS-ZI-9Pz" kind="relationship" relationship="viewControllers" id="G38-dK-rto"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yz7-wl-7eR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -440,7 +587,7 @@
         <scene sceneID="jpc-ma-31U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cJE-SK-0VO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="feed_tab" id="hDe-wl-sWg">
+                    <tabBarItem key="tabBarItem" title="" image="feed_tab" selectedImage="feed_tab" id="hDe-wl-sWg">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -478,10 +625,48 @@
             </objects>
             <point key="canvasLocation" x="3216" y="115"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xwk-9z-Bxz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XmS-ZI-9Pz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile_tab" selectedImage="profile_tab" id="Mo8-pJ-tfb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SZd-yr-Dhj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vah-PD-W1O" kind="relationship" relationship="rootViewController" id="KAQ-j8-ZCR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXn-Wy-QnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4854" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vQP-kp-zRR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KlX-fv-ZvG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Vg8-Sm-7P8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x6r-Qh-czL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xcz-P8-1uV" kind="relationship" relationship="rootViewController" id="DdB-Mr-SU4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGn-td-3wh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6414" y="115"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ZAb-Hd-pnf"/>
-        <segue reference="78p-Uj-lF7"/>
+        <segue reference="xdo-gF-ihj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bubble.right" catalog="system" width="128" height="110"/>
@@ -490,6 +675,7 @@
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="25"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>
