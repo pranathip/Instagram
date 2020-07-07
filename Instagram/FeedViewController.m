@@ -80,6 +80,10 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
     Post *post = self.posts[indexPath.row];
+    PFUser *currentUser = [PFUser currentUser];
+    cell.post = post;
+    cell.usernameLabel.text = currentUser.username;
+    cell.likesCountLabel.text = [NSString stringWithFormat: @"%@", post.likeCount];
     cell.captionLabel.text = post.caption;
     cell.postImageView.file = post[@"image"];
     [cell.postImageView loadInBackground];

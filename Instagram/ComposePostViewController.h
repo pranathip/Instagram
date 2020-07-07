@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ComposePostViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 @property (weak, nonatomic) IBOutlet UITextView *captionTextView;
+@property (weak, nonatomic) IBOutlet UILabel *placeholderLabel;
 
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size;
 

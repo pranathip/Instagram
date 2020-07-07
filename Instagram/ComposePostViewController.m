@@ -9,7 +9,7 @@
 #import "ComposePostViewController.h"
 #import "Post.h"
 
-@interface ComposePostViewController ()
+@interface ComposePostViewController () <UITextViewDelegate>
 
 @end
 
@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.captionTextView.delegate = self;
+    [self.captionTextView addSubview:self.placeholderLabel];
 }
 - (IBAction)closeButtonTapped:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
@@ -70,6 +72,24 @@
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
+- (void) textViewDidChange:(UITextView *)theTextView
+{
+    if(![self.captionTextView hasText]) {
+        NSLog(@"no text");
+        [UIView animateWithDuration:0.15 animations:^{
+            [self.captionTextView addSubview:self.placeholderLabel];
+            self.placeholderLabel.alpha = 1.0;
+        }];
+    } else if ([[self.captionTextView subviews] containsObject:self.placeholderLabel]) {
+        [UIView animateWithDuration:0.15 animations:^{
+            self.placeholderLabel.alpha = 0.0;
+            
+    } completion:^(BOOL finished) {
+        //[self.placeholderLabel removeFromSuperview];
+    }];
+  }
 }
 
 /*

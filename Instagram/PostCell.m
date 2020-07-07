@@ -20,5 +20,24 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)didLike:(id)sender {
+    if (self.post.liked == YES) {
+        self.post.liked = NO;
+        self.post.likeCount = [NSNumber numberWithInt:[self.post.likeCount intValue] - 1];
+        self.likeButton.selected = NO;
+        self.likeButton.tintColor = [UIColor blackColor];
+        [self refreshCell];
+    } else {
+        self.post.liked = YES;
+        self.post.likeCount = [NSNumber numberWithInt:[self.post.likeCount intValue] + 1];
+        self.likeButton.selected = YES;
+        self.likeButton.tintColor = [UIColor redColor];
+        [self refreshCell];
+    }
+}
+
+- (void) refreshCell {
+    self.likesCountLabel.text = [NSString stringWithFormat:@"%@", self.post.likeCount];
+}
 
 @end

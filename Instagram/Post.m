@@ -8,6 +8,7 @@
 
 //  Post.m
 #import "Post.h"
+
 @implementation Post
     
 @dynamic postID;
@@ -16,6 +17,7 @@
 @dynamic caption;
 @dynamic image;
 @dynamic likeCount;
+@dynamic liked;
 @dynamic commentCount;
 
 + (nonnull NSString *)parseClassName {
