@@ -7,9 +7,10 @@
 //
 
 #import "EditProfileViewController.h"
+#import "Post.h"
 @import Parse;
 
-@interface EditProfileViewController ()
+@interface EditProfileViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
 
@@ -20,6 +21,10 @@
     self.profilePicView.layer.cornerRadius = 50;
     PFUser *currentUser = [PFUser currentUser];
     self.userNameTextView.text = currentUser.username;
+    if ([currentUser objectForKey:@"profilePicture"]) {
+        self.profilePicView.file = [currentUser objectForKey:@"profilePicture"];
+        [self.profilePicView loadInBackground];
+    }
     if ([currentUser objectForKey:@"name"]) {
         self.nameTextView.text = [currentUser objectForKey:@"name"];
     }
@@ -28,8 +33,45 @@
     }
     // Do any additional setup after loading the view.
 }
+- (IBAction)changeProfileButtonTapped:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+    
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    // Get the image captured by the UIImagePickerController
+    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+    
+    //UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+
+    // Do something with the images (based on your use case)
+    self.profilePicView.image = originalImage;
+    
+    PFUser *currentUser = [PFUser currentUser];
+    currentUser[@"profilePicture"] = [Post getPFFileFromImage:[self resizeImage:self.profilePicView.image withSize:CGSizeMake(100, 100)]];
+    
+    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Profile picture updated");
+        } else {
+            NSLog(@"Error updating profile picture: %@", error.localizedDescription);
+        }
+    }];
+    
+    // Dismiss UIImagePickerController to go back to your original view controller
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)cancelButtonTapped:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
+    //[self performSegueWithIdentifier:@"backToProfileSegue" sender:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)didEditNameField:(id)sender {
@@ -67,6 +109,20 @@
             NSLog(@"Error updating bio: %@", error.localizedDescription);
         }
     }];
+}
+
+- (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
+    UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    
+    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
+    resizeImageView.image = image;
+    
+    UIGraphicsBeginImageContext(size);
+    [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 /*

@@ -29,7 +29,7 @@
 - (IBAction)postButtonTapped:(id)sender {
     NSLog(@"tapped");
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [Post postUserImage: [self resizeImage:self.postImageView.image withSize:CGSizeMake(152.5, 152.5)] withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError *_Nullable error) {
+    [Post postUserImage: [self resizeImage:self.postImageView.image withSize:CGSizeMake(170, 170)] withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError *_Nullable error) {
         if (error) {
             NSLog(@"Error posting: %@", error.localizedDescription);
         } else {
@@ -44,9 +44,7 @@
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
     imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
     [self presentViewController:imagePickerVC animated:YES completion:nil];
-    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

@@ -21,12 +21,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iJY-2a-vdi">
-                                <rect key="frame" x="20" y="297.5" width="374" height="34"/>
+                                <rect key="frame" x="20" y="294" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwv-az-GsG">
-                                <rect key="frame" x="20" y="353.5" width="374" height="36"/>
+                                <rect key="frame" x="20" y="350" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="G2L-mq-dpe"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJ9-kE-crI">
-                                <rect key="frame" x="20" y="241.5" width="374" height="34"/>
+                                <rect key="frame" x="20" y="238" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Q-2P-WVK">
-                                <rect key="frame" x="128" y="153" width="159" height="64.5"/>
+                                <rect key="frame" x="128" y="153" width="159" height="61"/>
                                 <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="52"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -427,7 +427,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1Vi-ZE-lsQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1Vi-ZE-lsQ" customClass="PFImageView">
                                 <rect key="frame" x="20" y="117" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="izf-By-LHz"/>
@@ -476,7 +476,7 @@
                         <outlet property="bioLabel" destination="i0u-KV-ZKb" id="Z5l-O3-U7r"/>
                         <outlet property="editProfileButton" destination="tle-L1-RK8" id="Cbw-L5-WNB"/>
                         <outlet property="nameLabel" destination="e0g-qo-rnZ" id="JHF-6l-BdW"/>
-                        <outlet property="profilePicView" destination="1Vi-ZE-lsQ" id="55L-q3-fVL"/>
+                        <outlet property="profilePicView" destination="1Vi-ZE-lsQ" id="EgZ-4Z-RAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqh-hC-zWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -491,7 +491,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="XCF-1k-ndy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="XCF-1k-ndy" customClass="PFImageView">
                                 <rect key="frame" x="157" y="113" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Wof-KX-32C"/>
@@ -501,9 +501,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEl-QR-sgn">
                                 <rect key="frame" x="134" y="221" width="146" height="30"/>
                                 <state key="normal" title="Change Profile Photo"/>
+                                <connections>
+                                    <action selector="changeProfileButtonTapped:" destination="Xcz-P8-1uV" eventType="touchUpInside" id="RQB-DP-EyI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-Cw-wKk">
-                                <rect key="frame" x="20" y="261" width="374" height="34"/>
+                                <rect key="frame" x="82" y="261" width="312" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -511,7 +514,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kZ-pm-phw">
-                                <rect key="frame" x="20" y="303" width="374" height="34"/>
+                                <rect key="frame" x="82" y="303" width="312" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -519,29 +522,53 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRg-B5-aSe">
-                                <rect key="frame" x="20" y="345" width="374" height="34"/>
+                                <rect key="frame" x="82" y="345" width="312" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="didEditBioField:" destination="Xcz-P8-1uV" eventType="editingChanged" id="sJf-gw-kkI"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-t6-KyL">
+                                <rect key="frame" x="8" y="269.5" width="38" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2f-hN-d9B">
+                                <rect key="frame" x="8" y="311.5" width="66" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfT-Q5-uXM">
+                                <rect key="frame" x="8" y="353.5" width="21" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Q2f-hN-d9B" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="8" id="BnH-mH-kLq"/>
+                            <constraint firstItem="ZfT-Q5-uXM" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="8" id="Bt9-Op-Mff"/>
+                            <constraint firstItem="5kE-t6-KyL" firstAttribute="centerY" secondItem="AJF-Cw-wKk" secondAttribute="centerY" id="Df1-uM-Vob"/>
                             <constraint firstItem="XCF-1k-ndy" firstAttribute="centerX" secondItem="Wno-HK-naJ" secondAttribute="centerX" id="FKW-2W-G9t"/>
                             <constraint firstItem="0kZ-pm-phw" firstAttribute="top" secondItem="AJF-Cw-wKk" secondAttribute="bottom" constant="8" id="GcG-pv-cGY"/>
                             <constraint firstItem="F1e-mj-u3o" firstAttribute="trailing" secondItem="fRg-B5-aSe" secondAttribute="trailing" constant="20" id="HS2-wt-GzE"/>
                             <constraint firstItem="XCF-1k-ndy" firstAttribute="top" secondItem="F1e-mj-u3o" secondAttribute="top" constant="25" id="Hce-mA-xL6"/>
-                            <constraint firstItem="AJF-Cw-wKk" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="20" id="QWG-pp-mTf"/>
+                            <constraint firstItem="5kE-t6-KyL" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="8" id="LJ4-fj-jVV"/>
+                            <constraint firstItem="fRg-B5-aSe" firstAttribute="centerY" secondItem="ZfT-Q5-uXM" secondAttribute="centerY" id="Lam-N0-aGu"/>
                             <constraint firstItem="sEl-QR-sgn" firstAttribute="centerX" secondItem="Wno-HK-naJ" secondAttribute="centerX" id="Sn9-Yg-HGq"/>
                             <constraint firstItem="fRg-B5-aSe" firstAttribute="top" secondItem="0kZ-pm-phw" secondAttribute="bottom" constant="8" id="T8H-kk-gbb"/>
+                            <constraint firstItem="AJF-Cw-wKk" firstAttribute="leading" secondItem="5kE-t6-KyL" secondAttribute="trailing" constant="36" id="XIe-B5-lzU"/>
+                            <constraint firstItem="fRg-B5-aSe" firstAttribute="leading" secondItem="ZfT-Q5-uXM" secondAttribute="trailing" constant="53" id="Y6m-i3-CGa"/>
                             <constraint firstItem="AJF-Cw-wKk" firstAttribute="top" secondItem="sEl-QR-sgn" secondAttribute="bottom" constant="10" id="aOX-Th-p3a"/>
+                            <constraint firstItem="0kZ-pm-phw" firstAttribute="centerY" secondItem="Q2f-hN-d9B" secondAttribute="centerY" id="cyI-9t-gaS"/>
                             <constraint firstItem="F1e-mj-u3o" firstAttribute="trailing" secondItem="AJF-Cw-wKk" secondAttribute="trailing" constant="20" id="gxY-Px-WnA"/>
-                            <constraint firstItem="0kZ-pm-phw" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="20" id="hYT-7g-7xD"/>
                             <constraint firstItem="sEl-QR-sgn" firstAttribute="top" secondItem="XCF-1k-ndy" secondAttribute="bottom" constant="8" id="qZ2-FG-Dnz"/>
-                            <constraint firstItem="fRg-B5-aSe" firstAttribute="leading" secondItem="F1e-mj-u3o" secondAttribute="leading" constant="20" id="rfp-Cy-uok"/>
                             <constraint firstItem="F1e-mj-u3o" firstAttribute="trailing" secondItem="0kZ-pm-phw" secondAttribute="trailing" constant="20" id="t8R-QN-itM"/>
+                            <constraint firstItem="0kZ-pm-phw" firstAttribute="leading" secondItem="Q2f-hN-d9B" secondAttribute="trailing" constant="8" id="tjL-tm-0Dv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F1e-mj-u3o"/>
                     </view>
@@ -556,7 +583,7 @@
                         <outlet property="bioTextView" destination="fRg-B5-aSe" id="veH-9I-4nt"/>
                         <outlet property="changeProfilePicButton" destination="sEl-QR-sgn" id="yz0-Ol-4Fe"/>
                         <outlet property="nameTextView" destination="AJF-Cw-wKk" id="Mpn-k2-Oxx"/>
-                        <outlet property="profilePicView" destination="XCF-1k-ndy" id="DJ4-x7-lU6"/>
+                        <outlet property="profilePicView" destination="XCF-1k-ndy" id="wwd-v5-Sjr"/>
                         <outlet property="userNameTextView" destination="0kZ-pm-phw" id="aOO-tS-QQs"/>
                     </connections>
                 </viewController>

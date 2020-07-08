@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Parse;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EditProfileViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *profilePicView;
+@property (weak, nonatomic) IBOutlet PFImageView *profilePicView;
 @property (weak, nonatomic) IBOutlet UIButton *changeProfilePicButton;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextView;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextView;
