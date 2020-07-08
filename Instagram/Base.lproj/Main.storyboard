@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,12 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iJY-2a-vdi">
-                                <rect key="frame" x="20" y="294" width="374" height="34"/>
+                                <rect key="frame" x="20" y="297.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwv-az-GsG">
-                                <rect key="frame" x="20" y="350" width="374" height="36"/>
+                                <rect key="frame" x="20" y="353.5" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="G2L-mq-dpe"/>
@@ -41,7 +42,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJ9-kE-crI">
-                                <rect key="frame" x="20" y="238" width="374" height="34"/>
+                                <rect key="frame" x="20" y="241.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -67,7 +68,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Q-2P-WVK">
-                                <rect key="frame" x="128" y="153" width="159" height="61"/>
+                                <rect key="frame" x="128" y="153" width="159" height="64.5"/>
                                 <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="52"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -116,22 +117,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTM-NY-dpT">
-                                <rect key="frame" x="20" y="282" width="374" height="34"/>
+                                <rect key="frame" x="20" y="281.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-wU-FqA">
-                                <rect key="frame" x="20" y="228" width="374" height="34"/>
+                                <rect key="frame" x="20" y="227.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Czu-NY-cih">
-                                <rect key="frame" x="20" y="336" width="374" height="34"/>
+                                <rect key="frame" x="20" y="335.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WE-UP-BdA">
-                                <rect key="frame" x="20" y="390" width="374" height="38"/>
+                                <rect key="frame" x="20" y="389.5" width="374" height="38"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="PxJ-iJ-WBn"/>
@@ -166,7 +167,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQu-Q6-0RK">
-                                <rect key="frame" x="128" y="138" width="159" height="65"/>
+                                <rect key="frame" x="128" y="138" width="159" height="64.5"/>
                                 <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="52"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -456,6 +457,35 @@
                                     <segue destination="KlX-fv-ZvG" kind="presentation" modalPresentationStyle="fullScreen" id="dCL-G3-qPO"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OeI-Hx-6Eu">
+                                <rect key="frame" x="0.0" y="348" width="414" height="465"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="X50-FK-Brd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profilePostCell" id="sDA-cQ-EcU" customClass="ProfilePostCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="keW-LN-khS">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3g3-0K-BSL" customClass="PFImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="postImage" destination="3g3-0K-BSL" id="Jrc-JU-S5M"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -463,10 +493,14 @@
                             <constraint firstItem="i0u-KV-ZKb" firstAttribute="top" secondItem="e0g-qo-rnZ" secondAttribute="bottom" constant="8" id="4F9-S3-CT2"/>
                             <constraint firstItem="tle-L1-RK8" firstAttribute="leading" secondItem="i0u-KV-ZKb" secondAttribute="leading" id="6r1-XA-TGV"/>
                             <constraint firstItem="1Vi-ZE-lsQ" firstAttribute="leading" secondItem="zxl-Tj-MgO" secondAttribute="leading" constant="20" id="NNj-Dc-dF0"/>
+                            <constraint firstItem="OeI-Hx-6Eu" firstAttribute="bottom" secondItem="zxl-Tj-MgO" secondAttribute="bottom" id="Omv-rI-cEP"/>
+                            <constraint firstItem="OeI-Hx-6Eu" firstAttribute="trailing" secondItem="zxl-Tj-MgO" secondAttribute="trailing" id="P4z-eM-xnY"/>
                             <constraint firstItem="zxl-Tj-MgO" firstAttribute="trailing" secondItem="tle-L1-RK8" secondAttribute="trailing" constant="20" id="PwV-Gt-ZUZ"/>
                             <constraint firstItem="1Vi-ZE-lsQ" firstAttribute="top" secondItem="zxl-Tj-MgO" secondAttribute="top" constant="29" id="a6y-3X-osZ"/>
                             <constraint firstItem="i0u-KV-ZKb" firstAttribute="leading" secondItem="e0g-qo-rnZ" secondAttribute="leading" id="bd6-wh-Om8"/>
                             <constraint firstItem="e0g-qo-rnZ" firstAttribute="leading" secondItem="zxl-Tj-MgO" secondAttribute="leading" constant="20" id="g4I-iD-s72"/>
+                            <constraint firstItem="OeI-Hx-6Eu" firstAttribute="leading" secondItem="zxl-Tj-MgO" secondAttribute="leading" id="gME-MW-DjN"/>
+                            <constraint firstItem="OeI-Hx-6Eu" firstAttribute="top" secondItem="tle-L1-RK8" secondAttribute="bottom" constant="24" id="lE1-BV-bEN"/>
                             <constraint firstItem="e0g-qo-rnZ" firstAttribute="top" secondItem="1Vi-ZE-lsQ" secondAttribute="bottom" constant="12" id="vqN-PJ-Svj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zxl-Tj-MgO"/>
@@ -474,6 +508,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="5SZ-da-G9G"/>
                     <connections>
                         <outlet property="bioLabel" destination="i0u-KV-ZKb" id="Z5l-O3-U7r"/>
+                        <outlet property="collectionsView" destination="OeI-Hx-6Eu" id="0bh-w8-umq"/>
                         <outlet property="editProfileButton" destination="tle-L1-RK8" id="Cbw-L5-WNB"/>
                         <outlet property="nameLabel" destination="e0g-qo-rnZ" id="JHF-6l-BdW"/>
                         <outlet property="profilePicView" destination="1Vi-ZE-lsQ" id="EgZ-4Z-RAG"/>
